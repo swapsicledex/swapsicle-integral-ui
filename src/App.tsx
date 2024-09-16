@@ -14,9 +14,9 @@ const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID
 
 export const defaultChain = defineChain({
   id: DEFAULT_CHAIN_ID,
-  network: 'holesky',
-  name: 'Holesky',
-  nativeCurrency: { name: 'Holesky Ether', symbol: 'ETH', decimals: 18 },
+  network: 'mantle-sepolia',
+  name: 'Mantle Sepolia',
+  nativeCurrency: { name: 'Mantle', symbol: 'WMNT', decimals: 18 },
   rpcUrls: {
     default: {
       http: [import.meta.env.VITE_INFURA_RPC],
@@ -27,12 +27,12 @@ export const defaultChain = defineChain({
   },
   blockExplorers: {
     etherscan: {
-      name: 'Etherscan',
-      url: 'https://holesky.etherscan.io',
+      name: 'Mantle Sepolia Explorer',
+      url: 'https://explorer.sepolia.mantle.xyz',
     },
     default: {
-      name: 'Etherscan',
-      url: 'https://holesky.etherscan.io',
+      name: 'Mantle Sepolia Explorer',
+      url: 'https://explorer.sepolia.mantle.xyz',
     },
   },
   contracts: {
