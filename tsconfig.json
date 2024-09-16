@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@cryptoalgebra/integral-sdk": ["./node_modules/swapsicledex/integral-sdk"],
     }
   },
   "include": ["src"],
