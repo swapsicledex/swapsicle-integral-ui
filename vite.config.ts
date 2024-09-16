@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src")
+      "@": path.resolve(__dirname, "./src"),
+      "@cryptoalgebra/integral-sdk": path.resolve(__dirname, "node_modules/@swapsicledex/integral-sdk")
     }
   }
 })
