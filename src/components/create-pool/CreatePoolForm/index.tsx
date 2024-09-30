@@ -18,6 +18,7 @@ import Summary from '../Summary';
 import SelectPair from '../SelectPair';
 import { STABLECOINS } from '@/constants/tokens';
 import { TransactionType } from '@/state/pendingTransactionsStore';
+import { Link } from 'react-router-dom';
 
 const CreatePoolForm = () => {
     const { currencies } = useDerivedSwapInfo();
@@ -45,6 +46,10 @@ const CreatePoolForm = () => {
     const [poolState] = usePool(poolAddress);
 
     const isPoolExists = poolState === PoolState.EXISTS;
+
+    if (areCurrenciesSelected && poolAddress) {
+      console.log(`${currencyA?.symbol}-${currencyB.symbol}: ${poolAddress} (${isPoolExists ? 'exists' : 'new'})`)
+    }
 
     const mintInfo = useDerivedMintInfo(
         currencyA ?? undefined,
@@ -141,6 +146,9 @@ const CreatePoolForm = () => {
                     'Create Pool'
                 )}
             </Button>
+            {areCurrenciesSelected && !isSameToken && isPoolExists && (
+                <Link to={`/pool/${poolAddress}`}>Browse to the existing pool</Link>
+            )}
         </div>
     );
 };
