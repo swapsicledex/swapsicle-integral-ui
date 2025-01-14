@@ -14,8 +14,8 @@ const projectId = import.meta.env.VITE_WALLETCONNECT_PROJECT_ID
 
 export const defaultChain = defineChain({
   id: DEFAULT_CHAIN_ID,
-  network: 'mantle-sepolia',
-  name: 'Mantle Sepolia',
+  network: 'mantle',
+  name: 'Mantle',
   nativeCurrency: { name: 'Mantle', symbol: 'WMNT', decimals: 18 },
   rpcUrls: {
     default: {
@@ -27,12 +27,12 @@ export const defaultChain = defineChain({
   },
   blockExplorers: {
     etherscan: {
-      name: 'Mantle Sepolia Explorer',
-      url: 'https://explorer.sepolia.mantle.xyz',
+      name: 'Mantle Explorer',
+      url: 'https://explorer.mantle.xyz',
     },
     default: {
-      name: 'Mantle Sepolia Explorer',
-      url: 'https://explorer.sepolia.mantle.xyz',
+      name: 'Mantle Explorer',
+      url: 'https://explorer.mantle.xyz',
     },
   },
   contracts: {
