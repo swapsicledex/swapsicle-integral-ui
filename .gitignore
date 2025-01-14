@@ -25,3 +25,4 @@ dist-ssr
 
 src/graphql/generated
 src/generated.ts
+.vercel
